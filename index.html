@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Cormorant+SC:wght@300;400;500;600;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Manrope:wght@200..800&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Questrial&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <style>
         :root {
             --brand: rgb(237, 233, 228);
@@ -17,7 +18,9 @@
             --neutral2: rgb(255, 255, 255);
             --userColor_3: rgb(64, 64, 64);
         }
-
+        body{
+            overflow-x: hidden;
+        }
         .navbar {
             background-color: var(--brand);
             padding: 1rem 0;
@@ -48,16 +51,6 @@
             min-height: 80vh;
         }
         
-        .btn-custom {
-            background-color: var(--complementary);
-            border: none;
-            font-size: small;
-        }
-        
-        .btn-custom:hover {
-            background-color: var(--neutral1);
-        }
-        
         .hero-title {
             font-family: 'Cormorant SC', serif;
         }
@@ -71,7 +64,7 @@
             border: none;
             font-size: 14px;
             font-family: 'Lato', serif;
-            padding: 1rem 2.5rem;
+            padding: 1rem 3.5rem;
         }
 
         /* About section */
@@ -124,11 +117,41 @@
             margin-right: -8.2rem;
             height: 49vh;
         }
-        .latest-post {
-            font-family:"Nanum Brush Script", cursive;
+        .latest-post, .design{
+            font-family:'Brush Script MT', cursive;
             font-style: italic;
         }
-
+         /*contact  */
+        .contact {
+            background-color: var(--brand);
+            color: var(--neutral1);
+        }
+        .reach-me{
+            font-family: 'Cormorant SC', serif;
+        }
+        .socials i {
+            font-size: 2rem;
+            color: var(--neutral1);
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+        .socials i:hover {
+            color: var(--complementary);
+            transform: scale(1.2);
+        }
+        /* footer */
+        .footer{
+            background-color:var(--complementary);
+        }
+        .footer-nav .nav-link{
+            color: white;
+            font-weight: 700;
+            font-family: 'Cormorant SC', serif;
+        }
+        .footer-nav .nav-link:hover {
+            color: var(--secondary);
+        }
+        /* media query */
         @media screen and (max-width: 968px){
             .blog-img{
                 margin-right:0;
@@ -192,11 +215,10 @@
                 <!-- Image section -->
                 <div class="col-12 col-lg-5 text-center mb-4 mb-lg-0">
                     <img src="https://bsihgp.yourbrand.studio/files/dynamicContent/sites/bsihgp/images/en/webpage_20/ls1uqfa3/element_698/rwdMode_1/485x660/zdjecie_2.webp" 
-                        alt="my image"
-                        class="about-img img-fluid rounded"
-                    >
+                    alt="my image"
+                    class="about-img img-fluid rounded">
                 </div>
-                
+ z               
                 <!-- Text section -->
                 <div class="col-12 col-lg-6 text-center text-lg-start">
                     <h1 class="about fw-bold text-uppercase mb-4">About Me</h1>
@@ -208,7 +230,7 @@
                         In fermentum et sollicitudin ac orci phasellus egestas tellus. Cursus vitae congue mauris rhoncus aenean. 
                         Amet est placerat in egestas. Praesent tristique magna sit amet purus gravida.
                     </p>
-                    <a href="#" class="hero-btn btn bg-dark btn-primary btn-lg">Find out more</a>
+                    <a href="/pages/about.html" class="hero-btn btn bg-dark btn-primary btn-lg">Find out more</a>
                 </div>
             </div>
         </div>
@@ -264,7 +286,7 @@
                 </div>
                 <!-- side content -->
                 <div class="blog-text col-lg-5 text-white p-5">
-                    <p class="latest-post mb-3 text-dark fs-4">Latest Post</p>
+                    <p class="latest-post text-dark fs-3">Latest Post</p>
                     <h3 class="fs-2 text-uppercase">
                         What to keep in mind when creating a visual brand identity?
                     </h3>
@@ -277,6 +299,85 @@
             </div>
         </div>
     </section>
+    <!-- Contact -->
+    <section class="reach-me d-flex row align-items-center py-4">
+        <div  class="contact py-4">
+            <div class="col-12 text-center">
+                <h1 class="pt-3 fs-2 text-uppercase fw-bold">
+                    write to me and we will find the perfect solutions for you!
+                </h1>
+            </div>
+            <div class="col-12 text-center mt-4 pb-4">   
+                <a href="/pages/contact.html" class="hero-btn btn bg-dark btn-primary btn-lg">Contact</a>
+            </div>
+        </div>
+        <!-- social media links -->
+        <div class="row">
+            <div class="col-12 text-center mt-4">
+                <h1 class="pt-3 fs-2 text-uppercase fw-bold">
+                    Follow me on <br>social media
+                </h1>
+                <p class=" fs-4 fw-bold" >
+                    @artstudio
+                </p>
+            </div>
+            <div class="row justify-content-center mt-4 pb-4">
+                <div class="col-auto">
+                    <a href="#" class="btn btn-outline-dark btn-sm rounded-circle p-2 mx-2 mx-md-3">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                </div>
+                <div class="col-auto">
+                    <a href="#" class="btn btn-outline-dark btn-sm rounded-circle p-2 mx-2 mx-md-3">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                </div>
+                <div class="col-auto">
+                    <a href="#" class="btn btn-outline-dark btn-sm rounded-circle p-2 mx-2 mx-md-3">
+                        <i class="bi bi-pinterest"></i>
+                    </a>
+                </div>
+                <div class="col-auto">
+                    <a href="#" class="btn btn-outline-dark btn-sm rounded-circle p-2 mx-2 mx-md-3">
+                        <i class="bi bi-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer section -->
+    <footer class=" footer text-white pt-5 pb-2">
+        <div class="container">
+            <div class="row">
+                <!--Footer Navigation Links -->
+                <div class="col-md-4 mb-4 mb-md-0 py-2">
+                    <ul class="list-unstyled footer-nav">
+                        <li class="mb-2"><a class="nav-link py-2 text-uppercase" href="#">Home</a></li>
+                        <li class="mb-2"><a class="nav-link py-2 text-uppercase" href="/pages/about.html">About me</a></li>
+                        <li class="mb-2"><a class="nav-link py-2 text-uppercase" href="#blog">Blog</a></li>
+                        <li class="mb-2"><a class="nav-link py-2 text-uppercase" href="/pages/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Logo -->
+                <div class="col-md-4 mb-4 mb-md-0 text-center">
+                    <h3 class="fs-2 fst-italic mb-3">Art Studio</h3>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <p class="mb-1">ArtStudio</p>
+                    <p class="mb-1">artstudio@gmail.com</p>
+                </div>
+            </div>
+            <!-- Copyright -->
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-1">© 2025 Art Studio. All rights reserved.</p>
+                    <p class="mb-0">Designed by <span class="design fs-3">midecodes</span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
