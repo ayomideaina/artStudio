@@ -41,7 +41,7 @@
             font-weight: 700;
         }
         
-        .nav-link.active {
+        .nav-link:hover {
             color: var(--complementary);
             text-decoration: underline;
         }
@@ -64,7 +64,11 @@
             border: none;
             font-size: 14px;
             font-family: 'Lato', serif;
-            padding: 1rem 3.5rem;
+            padding: 1rem 4rem;
+        }
+        .hero-btn:hover {
+            color: var(--secondary);
+            transform: scale(1.0);
         }
 
         /* About section */
@@ -120,6 +124,7 @@
         .latest-post, .design{
             font-family:'Brush Script MT', cursive;
             font-style: italic;
+            font-size: 2.5rem;
         }
          /*contact  */
         .contact {
@@ -176,10 +181,10 @@
             
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link mx-1 mx-lg-2" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active mx-1 mx-lg-2" href="#">Home</a></li>
                     <li class="nav-item"><a class="nav-link mx-1 mx-lg-2" href="/pages/about.html">About me</a></li>
-                    <li class="nav-item"><a class="nav-link mx-1 mx-lg-2" href="#blog">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link active mx-1 mx-lg-2" href="/pages/contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link mx-1 mx-lg-2" href="/pages/blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link mx-1 mx-lg-2" href="/pages/contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -218,7 +223,7 @@
                     alt="my image"
                     class="about-img img-fluid rounded">
                 </div>
- z               
+             
                 <!-- Text section -->
                 <div class="col-12 col-lg-6 text-center text-lg-start">
                     <h1 class="about fw-bold text-uppercase mb-4">About Me</h1>
@@ -285,8 +290,8 @@
                     >
                 </div>
                 <!-- side content -->
-                <div class="blog-text col-lg-5 text-white p-5">
-                    <p class="latest-post text-dark fs-3">Latest Post</p>
+                <div class="blog-text col-lg-5 text-white p-5 pt-2">
+                    <p class="latest-post text-dark">Latest Post</p>
                     <h3 class="fs-2 text-uppercase">
                         What to keep in mind when creating a visual brand identity?
                     </h3>
@@ -296,6 +301,9 @@
                     </p>
                     <a href="#" class="hero-btn btn bg-dark btn-primary btn-lg">Find out more</a>
                 </div>
+            </div>
+            <div class="col-12 text-center mt-4 pb-4">   
+                <a href="/pages/blog.html" class="hero-btn btn bg-dark btn-primary btn-lg">SEE MORE</a>
             </div>
         </div>
     </section>
